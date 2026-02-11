@@ -92,7 +92,9 @@ nav ul li {
     font-weight: var(--bold-font);
 }
 
-.secction001 {
+/** Personalizado **/
+
+.main_secction {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,19 +103,35 @@ nav ul li {
     margin: auto;
 }
 
-.div001 {
-    width: 25rem;
+.main_div {
+    width: 50rem;
     padding: 0.625rem;
     display:block;
 }
 
-.div001 h1 {
+.main_div h2 {
     margin-bottom: var(--bottom-margin);
+    text-align: center;
 }
 
-.div001 p {
+.main_div p {
     line-height: var(--line-height);
     padding: 0.3rem 0;
+}
+
+.content_secction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.content_div {
+    width: 60rem;
+    padding: 0.625rem;
+    display:block;
 }
 
 footer {
