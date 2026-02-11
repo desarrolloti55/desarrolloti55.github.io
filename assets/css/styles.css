@@ -11,6 +11,7 @@
     --bg-color-nav: #1c1f20;
     --bg-color-card: #3a3e42;
     --primary-color: #f1f1f1;
+    --link-color: #3596dc;
     --secundary-color: #c9270a;
     --primary-shadow: #191620;
     --secundary-shadow: #554730;
@@ -20,6 +21,7 @@
     --transition: 0.3s;
     --text-color: #f1f1f1;
     --text-color-cool: rgb(229, 62, 47);
+    --text-color-deep: #686869;
 }
 /* Variable end */
 
@@ -120,7 +122,6 @@ nav ul li {
 }
 
 .content_secction {
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
@@ -128,10 +129,19 @@ nav ul li {
     margin: auto;
 }
 
-.content_div {
-    width: 60rem;
-    padding: 0.625rem;
-    display:block;
+.content_secction a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+.content_secction a:hover {
+    color: var(--secundary-color);
+}
+
+.content_file_path, .content_files {
+    all: unset;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--text-color-deep);
 }
 
 footer {
