@@ -5,14 +5,21 @@
 
 > En proceso de redaccion...
 
+> idea - sera para ir agregando contenido.
+
 ---
+
+idea ...
+Como desarrollador y por reparticion de responsabilidades no participas en un principio en el plantamiento del proyecto, 
+sin embargo, se debe conocer de que va ser para que hagas un analisis previo y des recomendaciones.
+
 ## Problema
 
 ### Situacion previa
 
 idea: Que es lo correcto o lo adecuado?
 
-Antes de revisar o analisar el problema se propene la tentativa de lo que se decea atender, mejorar o crear.
+Antes de revisar o analisar el problema se propone la tentativa de lo que se decea atender, mejorar o crear.
 
 Documentacion
 
