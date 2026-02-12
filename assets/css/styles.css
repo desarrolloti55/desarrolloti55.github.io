@@ -8,6 +8,7 @@
     --bold-font: 700;
     --bolder-font: 900;
     --bg-color: #2b2e31;
+    --bg-color_ligth: #c9c9c9;
     --bg-color-nav: #1c1f20;
     --bg-color-card: #3a3e42;
     --primary-color: #f1f1f1;
@@ -142,6 +143,10 @@ nav ul li {
     font-weight: normal;
     font-style: italic;
     color: var(--text-color-deep);
+}
+
+.content_div {
+    margin: 1rem;
 }
 
 footer {

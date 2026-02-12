@@ -10,14 +10,8 @@ async function muestraArchivoMarkDown(paramFileName) {
     if(paramFileName!=null && paramFileName!='' && paramFileName!=filename)
         filename = 'assets/documents/'+paramFileName;
 
-    fetch(filename)
-        .then(response => response.text())
-        .then(markdown => {
-            const converter = new showdown.Converter();
-            const html = converter.makeHtml(markdown);
-            document.getElementById('file_path').innerHTML = filename;
-            document.getElementById('content').innerHTML = html;
-        }).catch(error => console.error('Error [muestraArchivoMarkDown]:', error));
+    document.getElementById('file_path').innerHTML = filename;
+    document.getElementById('content').src = filename;
 }
 
 async function listarArchivos() {

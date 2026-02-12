@@ -7,7 +7,7 @@ _Proceso de Desarrollo de Productos de Software_ [Documento _Area_Desarrollo.pdf
 
 
 <center>
-<img src="../images/Proyectos-Fases-del-Proceso-de-Dearrollo.png">
+<img src="./assets/images/Proyectos-Fases-del-Proceso-de-Dearrollo.png">
 </center>
 
 
