@@ -5,6 +5,7 @@
 
 > En proceso de redaccion...
 
+---
 ## Problema
 
 ### Situacion previa
@@ -15,6 +16,7 @@ Antes de revisar o analisar el problema se propene la tentativa de lo que se dec
 
 Documentacion
 
+---
 ## Solucion
 
 ### Entorno
@@ -23,3 +25,6 @@ Donde va habitar el proyecto y a quien va dirigido.
 
 
 ## Validacion
+
+
+IDEA : SI FUNCIONA PARA MI NO ES SEGURO QUE FUNCIONE PARA OTRO

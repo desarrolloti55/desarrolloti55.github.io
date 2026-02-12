@@ -1,6 +1,13 @@
 # DESAROLLADOR TI 55
 ___
 _2026-02-11_
+
+<br>
+
+<center>
+<img src="https://avatars.githubusercontent.com/u/174903163" style="width: 400px; height: 400px; border-radius: 50%; object-fit: cover;">
+</center>
+
 <br>
 
 <br>
