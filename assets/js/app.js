@@ -21,7 +21,7 @@ async function muestraArchivoMarkDown(paramFileName) {
 }
 
 async function listarArchivos() {
-    fetch('./assets/documents/_documents.json')
+    fetch('./assets/documents/documents.json')
         .then(response => response.json())
         .then(jsonString => {
             muestraListaArchivos(jsonString.archivos);  
