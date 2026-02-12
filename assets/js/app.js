@@ -10,7 +10,7 @@ const file = urlParams.get('file');
 console.log(file);
 
 filename = 'README.md';
-if(file!=filename)
+if(file!=null && file!='' && file!=filename)
     filename = 'assets/documents/'+file;
 
 console.log(filename);
@@ -28,6 +28,8 @@ async function listarArchivos() {
     const respuesta = await fetch('./assets/documents'); // La carpeta en tu servidor
     const html = await respuesta.text();
     
+    console.log(html);
+
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     
@@ -36,24 +38,24 @@ async function listarArchivos() {
         .map(a => a.innerText)
         .filter(nombre => !nombre.includes('../')); // Filtrar retrocesos de carpeta
 
-    const filesnames = ["README.md"];
+    const filesnames = ['README.md'];
 
     for (let index = 0; index < enlaces.length; index++) {
         const element = enlaces[index];
 
-        if(element.includes(".md")){
-            var elementSplit = element.split(".md");
+        if(element.includes('.md')){
+            var elementSplit = element.split('.md');
             var filename = elementSplit[0];
-            filesnames.push(filename + ".md");
+            filesnames.push(filename + '.md');
         }       
     }
 
-    var result = "";
+    var result = '';
     filesnames.forEach(function (item) {
         result += "<li><a href='?file=" + item + "'>" + item + "</a></li>";
     });
   
-    document.getElementById("list").innerHTML = result;
+    document.getElementById('list').innerHTML = result;
     
 }
 listarArchivos();
