@@ -8,7 +8,6 @@
     --bold-font: 700;
     --bolder-font: 900;
     --bg-color: #2b2e31;
-    --bg-color_ligth: #c9c9c9;
     --bg-color-nav: #1c1f20;
     --bg-color-card: #3a3e42;
     --primary-color: #f1f1f1;
@@ -112,14 +111,10 @@ nav ul li {
     display:block;
 }
 
-.main_div h2 {
-    margin-bottom: var(--bottom-margin);
-    text-align: center;
-}
-
 .main_div p {
     line-height: var(--line-height);
     padding: 0.3rem 0;
+    text-align: center;
 }
 
 .content_secction {
@@ -133,9 +128,15 @@ nav ul li {
 .content_secction a {
     text-decoration: none;
     color: var(--link-color);
+    font-size: 0.75rem;
 }
 .content_secction a:hover {
     color: var(--secundary-color);
+}
+
+.content_div {
+    margin: 1rem;
+    padding: 0.625rem;
 }
 
 .content_file_path, .content_files {
@@ -143,10 +144,6 @@ nav ul li {
     font-weight: normal;
     font-style: italic;
     color: var(--text-color-deep);
-}
-
-.content_div {
-    margin: 1rem;
 }
 
 footer {
