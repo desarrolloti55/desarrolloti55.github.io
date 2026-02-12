@@ -5,7 +5,7 @@ _2026-02-11_
 <br>
 
 <center>
-<img src="https://avatars.githubusercontent.com/u/174903163" style="width: 400px; height: 400px; border-radius: 50%; object-fit: cover;">
+<img src="https://avatars.githubusercontent.com/u/174903163" style="width: 80%; max-width: 350px; height: auto; border-radius: 50%; object-fit: cover;">
 </center>
 
 <br>
