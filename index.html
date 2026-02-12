@@ -14,6 +14,9 @@
         <!-- Animate CSS CDN site:https://animate.style/ -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+        <!-- zero-md library -->
+        <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
         <title>DESARROLLO TI 55</title>
     </head>
     <body>
@@ -35,7 +38,21 @@
         <!-- Content section -->
         <section class="content_secction" id="">
             <p class="content_file_path" id="file_path">file_path</p>
-            <div class="content_div" id="content">Vacio</div>
+            <div class="content_div">
+                <zero-md class="content_zero" id="content">
+                    <template data-append>
+                        <style> 
+                            table, th, td {
+                                border: 1px solid;
+                                border-collapse: collapse;
+                                border-color: #f1f1f1;
+                            }
+                            th, td { padding: 5px; }
+                            a { color: rgb(158, 167, 231); }                            
+                        </style>
+                    </template>
+                </zero-md>
+            </div>            
             <br><br>
             <ol class="content_files" id="list"></ol>
         </section>        
