@@ -1,8 +1,40 @@
+* {
+    color: var(--primary-color) !important;
+}
+
+
+p {
+    margin-top: 1.1rem;
+    text-align: justify;
+}
+
 table, th, td {
     border: 1px solid;
     border-collapse: collapse;
-    border-color: #f1f1f1;
+    border-color: var(--primary-color);
 }
+
 th, td { padding: 5px; }
-a { color: rgb(158, 167, 231); }   
-blockquote { background-color: #3a3e42; }    
+
+a { color: var(--link-color) !important; } 
+
+a:hover {
+    color: var(--link-color-hover) !important;;
+}
+
+pre, code {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+    padding: .3rem;
+    line-height: 1.2;
+    background-color: #333;
+}
+
+blockquote {
+  border-left: 4px solid var(--link-color);
+  padding-left: 1rem;
+}
