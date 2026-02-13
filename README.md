@@ -14,9 +14,9 @@ _2026-02-11_
 
 ### Sinopsis
 
-"Encontrando una pista tendremos impulso para avanzar", no siempre es claro como ser un buen programador ni como realizar un proyecto de software,
-por eso es que aqui reuno conceptos, conocimientos, temas e indicaciones para ir avanzando en este duro pero emocionante camino.
+"Si encontramos una pista tendremos el suficiente impulso para avanzar", No siempre es claro comó ser un buen programador, ni como realizar un proyecto de software,
+por eso qué aquí me dia a la tarea de reunir algunos conceptos, conocimientos, temas e indicaciones para ir avanzando sobre este dificil pero interesante camino.
 
-[Perfil GIT](https://github.com/desarrolloti55)
+[Perfil GITHUB](https://github.com/desarrolloti55)
 
 [Pagina WEB](https://desarrolloti55.github.io/)
