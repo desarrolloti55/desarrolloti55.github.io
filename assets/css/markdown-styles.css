@@ -1,0 +1,8 @@
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    border-color: #f1f1f1;
+}
+th, td { padding: 5px; }
+a { color: rgb(158, 167, 231); }   
+blockquote { background-color: #3a3e42; }    
