@@ -14,13 +14,15 @@
 <img src="./assets/images/Roadmap-Proyectos-Analista-Desarrollador.png">
 </center>
 
-## Ideas por detallar:
+### Ideas por detallar:
 
 * Establece tiempos en los que vas a atender tus diferentes actividades.
 * Si no te dan indicaciones claras, tienes que ver donde estas parado primero y buscar por ti.
 * Como desarrollador y por reparticion de responsabilidades no participas en un principio en el plantamiento del proyecto, 
 sin embargo, se debe conocer de que va ser para que hagas un analisis previo y des recomendaciones.
 * Lleva siempre una bitacora o historial de lo que haces.
+* Si solo escucho no aprendo, tengo que transcribirlo ya sea parafraceado para captar la informacion de mejor manera.
+* En VideoCursos debe anotar las ideas pricipales como minimo para retener la informacion que se te muestra.
 
 ### PREGUNTAS EN NUEVO PROYECTO
 
@@ -37,7 +39,7 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 
 ### Situacion previa
 
-## Ideas por detallar:
+### Ideas por detallar:
 * Que es lo correcto o lo adecuado?
 * Antes de revisar o analisar el problema se propone la tentativa de lo que se decea atender, mejorar o crear.
 
@@ -53,12 +55,21 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 
 > Donde va habitar el proyecto y a quien va dirigido.
 
+### Ideas por detallar:
+* No reinventar la rueda, a menos que sea para aprender.
+
 ## PR
+
+<center>
+<img src="./assets/images/PR-Estatus.png">
+</center>
 
 <center>
 <img src="./assets/images/2024-11-12_10_25_23-Diagram_Arquitectura__Figma.webp">
 </center>
 
+
+[Sistema Arquitectura](https://castores.notion.site/Sistema-Arquitectura-25a2979ee7e080e6b080db7f823fccf4)
 
 ---
 <br>
@@ -66,5 +77,5 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 
 ## Validacion
 
-## Ideas por detallar:
+### Ideas por detallar:
 * SI FUNCIONA PARA MI NO ES SEGURO QUE FUNCIONE PARA OTRO
