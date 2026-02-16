@@ -23,4 +23,4 @@ Los _requerimientos no funcionales_ (Calidad) definen **como** de comportarse el
 * escalabilidad. 
 
 
-[Anterior](?file=Proyectos-Fases-no1-Definicion-de-Proyecto.md)  [**Principal**](?file=Proyectos-Fases-del-Proceso-de-Dearrollo.md)  [Siguiente](?file=Proyectos-Fases-no2-Levantamiento-de-Requerimientos.md)
+[Anterior](?file=Proyectos-Fases-no1-Definicion-de-Proyecto.md)  [**Principal**](?file=Proyectos-Fases-del-Proceso-de-Dearrollo.md)  [Siguiente](?file=Proyectos-Fases-no3-Analisis.md)

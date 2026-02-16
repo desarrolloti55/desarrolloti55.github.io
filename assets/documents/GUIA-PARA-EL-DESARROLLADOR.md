@@ -5,22 +5,22 @@
 
 > En proceso de redaccion...
 
-> _idea - sera para ir agregando contenido._
 
 ---
+<br>
+<br>
 
 <center>
 <img src="./assets/images/Roadmap-Proyectos-Analista-Desarrollador.png">
 </center>
 
-idea ... 
+## Ideas por detallar:
 
-Establece tiempos en los que vas a atender tus diferentes actividades
-
-idea ...
-
-Como desarrollador y por reparticion de responsabilidades no participas en un principio en el plantamiento del proyecto, 
+* Establece tiempos en los que vas a atender tus diferentes actividades.
+* Si no te dan indicaciones claras, tienes que ver donde estas parado primero y buscar por ti.
+* Como desarrollador y por reparticion de responsabilidades no participas en un principio en el plantamiento del proyecto, 
 sin embargo, se debe conocer de que va ser para que hagas un analisis previo y des recomendaciones.
+* Lleva siempre una bitacora o historial de lo que haces.
 
 ### PREGUNTAS EN NUEVO PROYECTO
 
@@ -29,22 +29,29 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 3. Que necesitas para hacerlo?,
 4. Como lo planificas?,
 
+---
+<br>
+<br>
+
 ## Problema
 
 ### Situacion previa
 
-idea: Que es lo correcto o lo adecuado?
+## Ideas por detallar:
+* Que es lo correcto o lo adecuado?
+* Antes de revisar o analisar el problema se propone la tentativa de lo que se decea atender, mejorar o crear.
 
-Antes de revisar o analisar el problema se propone la tentativa de lo que se decea atender, mejorar o crear.
-
-Documentacion
+### Documentacion
 
 ---
+<br>
+<br>
+
 ## Solucion
 
 ### Entorno
 
-Donde va habitar el proyecto y a quien va dirigido.
+> Donde va habitar el proyecto y a quien va dirigido.
 
 ## PR
 
@@ -53,9 +60,11 @@ Donde va habitar el proyecto y a quien va dirigido.
 </center>
 
 
+---
+<br>
+<br>
+
 ## Validacion
 
-
-idea ...
-
-SI FUNCIONA PARA MI NO ES SEGURO QUE FUNCIONE PARA OTRO
+## Ideas por detallar:
+* SI FUNCIONA PARA MI NO ES SEGURO QUE FUNCIONE PARA OTRO
