@@ -5,17 +5,22 @@
 > En proceso de redaccion...
 
 
-
 Arroba.
 ~~~
 @ = AltGr + q
 ~~~
 
-
 ## Borra Archivo con GIT
 
 ~~~
 git rm -f filename1.txt
+~~~
+
+## Resete los cambios de un archivo
+
+~~~
+git checkout -- .
+git checkout -- filename1.txt
 ~~~
 
 ## STASH - Almacen temporal de cambios.

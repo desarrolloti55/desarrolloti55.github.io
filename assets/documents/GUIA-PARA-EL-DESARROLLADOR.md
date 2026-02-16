@@ -5,13 +5,29 @@
 
 > En proceso de redaccion...
 
-> idea - sera para ir agregando contenido.
+> _idea - sera para ir agregando contenido._
 
 ---
 
+<center>
+<img src="./assets/images/Roadmap-Proyectos-Analista-Desarrollador.png">
+</center>
+
+idea ... 
+
+Establece tiempos en los que vas a atender tus diferentes actividades
+
 idea ...
+
 Como desarrollador y por reparticion de responsabilidades no participas en un principio en el plantamiento del proyecto, 
 sin embargo, se debe conocer de que va ser para que hagas un analisis previo y des recomendaciones.
+
+### PREGUNTAS EN NUEVO PROYECTO
+
+1. Que vas hacer?, 
+2. Como lo vas a hacer?, 
+3. Que necesitas para hacerlo?,
+4. Como lo planificas?,
 
 ## Problema
 
@@ -30,8 +46,16 @@ Documentacion
 
 Donde va habitar el proyecto y a quien va dirigido.
 
+## PR
+
+<center>
+<img src="./assets/images/2024-11-12_10_25_23-Diagram_Arquitectura__Figma.webp">
+</center>
+
 
 ## Validacion
 
 
-IDEA : SI FUNCIONA PARA MI NO ES SEGURO QUE FUNCIONE PARA OTRO
+idea ...
+
+SI FUNCIONA PARA MI NO ES SEGURO QUE FUNCIONE PARA OTRO
