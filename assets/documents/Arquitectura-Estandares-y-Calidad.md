@@ -16,3 +16,10 @@ ISOS
 
 ### SOLID
 El principio SOLID es un acrónimo que representa cinco reglas fundamentales de la programación orientada a objetos (POO) diseñadas para crear software más flexible, legible y fácil de mantener. 
+
+
+[Sistema Arquitectura](https://castores.notion.site/Sistema-Arquitectura-25a2979ee7e080e6b080db7f823fccf4)
+
+<center>
+<img src="./assets/images/Estandar-Nombramiento.png">
+</center>
