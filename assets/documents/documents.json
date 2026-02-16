@@ -2,6 +2,8 @@
     "archivos" : [
         "README.md",
         "Objetivos.md",
+        "Metas.md",
+        "ISSUES.md",
 
         "Coordinacion-Evaluacion-de-Desarrollador.md",
         "GUIA-PARA-EL-DESARROLLADOR.md",
@@ -15,8 +17,12 @@
         "Proyectos-Fases-no2-Levantamiento-de-Requerimientos.md",
         "Proyectos-Fases-no3-Analisis.md",
         "Proyectos-Fases-no4-Diseño.md",
+        "Proyectos-Fases-no5-Analisis-de-Iteracion.md",
+        "Proyectos-Fases-no6-Desarrollo.md",
 
         "GIT.md",
-        "PASCAL.md"
+        "PASCAL.md",
+
+        "Tema-Desarrollo-Agnostico.md"
     ]
 }

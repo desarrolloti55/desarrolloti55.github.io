@@ -7,6 +7,10 @@
 
 <!-- En este documentos se describen las cosas necesarias para completar un proyecto en la empresa. -->
 
+---
+<br>
+<br>
+
 ## PROYECTO Actualizacion del template Castores v 0.2.1.0
 
 Fecha asignacion: *2026-01-19*
@@ -23,6 +27,13 @@ Fecha asignacion: *2026-01-19*
 ### Entregables
 * Repocitorio en GIT.
 
+## Fase actual
+
+Fase  : **8. QA**
+
+### Estatus actual : PR EN REVISION
+
+---
 <br>
 <br>
 
@@ -38,9 +49,22 @@ Fecha asignacion: *2026-01-19*
 * Java Micro-servicios SpringBoot
 * Pascal
 
+
 ### Entregables
+
 * Repocitorio en GIT
 * Documento de Diseño tecnico.
+
+
+## Fase actual
+
+Fase  : **4. Diseño**
+
+### Estatus actual : DESIGN SYNTESIS
+
+---
+<br>
+<br>
 
 <!-- PROYECTO SIAT-ALMACENES RFDI-->
 <!-- 
