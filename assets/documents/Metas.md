@@ -1,15 +1,16 @@
 
 # PROYECTOS
 
-*2026-02-16*
+**date:** _2026-02-16_
 
 > En proceso de redaccion...
+
+<small>Nota: A diferencia de Objetivos, Metas si es necesario fecha de avances y entrega.</small>
 
 <!-- En este documentos se describen las cosas necesarias para completar un proyecto en la empresa. -->
 
 ---
-<br>
-<br>
+<br><br>
 
 ## PROYECTO Actualizacion del template Castores v 0.2.1.0
 
@@ -34,13 +35,13 @@ Fase  : **8. QA**
 ### Estatus actual : PR EN REVISION
 
 ---
-<br>
-<br>
+<br><br>
 
 ## PROYECTO Portal SIAT-Proveedores (Kenworth)
 
 ### Skills
 
+* Documentar
 * SIAT - Convenios y consignaciones.
 * SIAT - Riquiciones
 * SIAT - Ordenes de compra
@@ -50,8 +51,10 @@ Fase  : **8. QA**
 * Pascal
 
 ### Recursos
+
 <!-- Consultado 2026-02-17 -->
 [Template de Angular y componentes](http://10.1.33.3/catalogo-componentes/)
+
 ### Entregables
 
 * Repocitorio en GIT
@@ -67,8 +70,7 @@ Fase  : **4. Diseño**
 ### Estatus actual : DESIGN SYNTESIS
 
 ---
-<br>
-<br>
+<br><br>
 
 <!-- PROYECTO SIAT-ALMACENES RFDI-->
 <!-- 

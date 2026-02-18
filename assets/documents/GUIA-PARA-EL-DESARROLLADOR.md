@@ -22,6 +22,7 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 * Si solo escucho no aprendo, tengo que transcribirlo ya sea parafraceado para captar la informacion de mejor manera.
 * En VideoCursos debe anotar las ideas pricipales como minimo para retener la informacion que se te muestra.
 * Esfurezate para que todo sea entendible para cualquieras hoy y el futuro.
+* Manten tu mente en orden si no pierdes tiempo y energia, por eso agrego [Objetivos](?file=Objetivos.md) y [Metas](?file=Metas.md).
 
 ### PREGUNTAS EN NUEVO PROYECTO
 
@@ -51,6 +52,8 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 
 ### Entorno
 
+> Hay que ver que se va a crear y como va a funcionar antes de siquiera crear codigo.
+>
 > Donde va habitar el proyecto y a quien va dirigido.
 
 ### Ideas por detallar:
