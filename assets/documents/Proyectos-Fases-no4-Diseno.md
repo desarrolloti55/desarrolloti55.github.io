@@ -17,12 +17,16 @@ Listado de cosas para capacitar a soporte
 * Procedimientos
 * Consultas
 
+> Hay que definir como va a funcionar y como se va a crear antes de coficarlo.
+
 --- 
 <br><br>
 
 ## Diseño Tecnico de Software
 
 El diseño tecnico de software es el proceso de planificar la **arquitectura, componentes, interfaces y datos** de un sistema antes de la codificación, garantizando soluciones escalables, seguras y eficientes.
+
+> En un inicio se utiliza lápiz y papel.
 
 Componentes Clave:
 * __Arquitectura de Software:__ Define la estructura de alto nivel (monolítica, microservicios, serverless).
@@ -70,6 +74,8 @@ Un **TDD** sólido debe estar organizado de forma lógica, generalmente bajo est
     * __Mantenlo vivo:__ El TDD no es estático; actualízalo a medida que el proyecto evoluciona para que no quede obsoleto.
     * __Sé consistente:__ Utiliza la misma terminología y formato en todo el documento para facilitar su lectura.
     * __No olvides los "No-Objetivos":__ Clarifica qué no estás intentando resolver para evitar que el alcance del proyecto crezca sin control. 
+
+[Receta TDD](?file=Reseta-TDD.md)
 
 --- 
 <br><br>
