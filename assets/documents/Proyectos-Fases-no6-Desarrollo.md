@@ -10,5 +10,7 @@ Se trata de la etapa donde se convierte el diseño en código funcional. En ella
 
 Tal etapa requiere atención al detalle y colaboración constante para garantizar que el código sea eficiente, legible y escalable. La programación culmina con la creación de un software ejecutable que puede ser sometido a pruebas para verificar su correcto funcionamiento y cumplimiento de los requisitos establecidos.
 
+--- 
+<br><br>
 
-[Anterior](?file=Proyectos-Fases-no5-Analisis-de-Iteracion)  [**Principal**](?file=Proyectos-Fases-del-Proceso-de-Dearrollo.md)  [Siguiente](?file=Proyectos-Fases-no6-Desarrollo.md)
+[Anterior](?file=Proyectos-Fases-no5-Analisis-de-Iteracion.md)  [**Principal**](?file=Proyectos-Fases-del-Proceso-de-Dearrollo.md)  [Siguiente](?file=Proyectos-Fases-no6-Desarrollo.md)

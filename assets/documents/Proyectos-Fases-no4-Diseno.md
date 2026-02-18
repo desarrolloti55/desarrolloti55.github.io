@@ -17,4 +17,61 @@ Listado de cosas para capacitar a soporte
 * Procedimientos
 * Consultas
 
+--- 
+<br><br>
+
+## Diseño Tecnico de Software
+
+El diseño tecnico de software es el proceso de planificar la **arquitectura, componentes, interfaces y datos** de un sistema antes de la codificación, garantizando soluciones escalables, seguras y eficientes.
+
+Componentes Clave:
+* __Arquitectura de Software:__ Define la estructura de alto nivel (monolítica, microservicios, serverless).
+* __Diseño de Base de Datos:__ Modelado de datos (relacional/NoSQL) y estructura de almacenamiento.
+* __Interfaces y APIs:__ Definición de cómo interactuarán los diferentes módulos y sistemas externos.
+* __Documento de Diseño Técnico (TDD):__ Actúa como hoja de ruta para desarrolladores y testers, detallando la implementación. 
+
+
+Principios y Técnicas:
+* __Modularidad:__ División en componentes cohesivos y con bajo acoplamiento.
+* __Abstracción:__ Organización de ideas y entidades antes de la implementación.
+* __Seguridad y Escalabilidad:__ Asegurar que el sistema sea robusto, sostenible y adaptable a futuros cambios.
+* __Documentación:__ Uso de diagramas (UML, flujos) para comunicación clara. 
+
+--- 
+<br><br>
+
+## Documento de Diseño Técnico (TDD)
+
+Un **Documento de Diseño Técnico (TDD)** es la hoja de ruta que explica cómo se construirá una solución de software. 
+A diferencia de los documentos funcionales que dicen qué debe hacer el sistema, el TDD se enfoca en **la arquitectura, los datos y las decisiones de ingeniería**. 
+
+Para crear uno efectivo, sigue esta estructura y mejores prácticas: 
+
+1. Estructura recomendada
+Un **TDD** sólido debe estar organizado de forma lógica, generalmente bajo estas secciones: 
+
+    * __Resumen y Objetivos:__ Define el problema que intentas resolver y el alcance del proyecto.
+    * __Contexto y Antecedentes:__ Explica por qué se toma esta dirección técnica y qué sistemas actuales se verán afectados.
+    * __Arquitectura del Sistema:__ Usa diagramas (como diagramas C4 o de flujo) para mostrar cómo interactúan los componentes.
+    * __Diseño de Datos:__ Detalla el esquema de la base de datos, modelos de datos y cómo fluirá la información.
+    * __Detalle de APIs y Componentes:__ Define los nuevos endpoints, servicios y lógica compleja (pseudocódigo si es necesario).
+    * __Consideraciones de Seguridad y Rendimiento:__ Describe protocolos de cifrado, manejo de errores y cómo escalará el sistema.
+    * __Plan de Pruebas y Despliegue:__ Estrategia para verificar que el código funcione y los pasos para llevarlo a producción. 
+
+2. Pasos para su elaboración
+
+    * __Reúne requisitos:__ Colabora con los stakeholders para entender las necesidades funcionales antes de proponer la técnica.
+    * __Elige tu stack:__ Define lenguajes, frameworks y bases de datos, justificando cada elección.
+    * __Dibuja primero:__ Antes de escribir párrafos largos, crea diagramas visuales para simplificar ideas complejas.
+    * __Redacta con sencillez:__ Usa lenguaje directo, listas con viñetas y evita jerga innecesaria para que sea accesible a todo el equipo.
+    * __Solicita revisión:__ Envía el borrador a otros ingenieros para recibir feedback y ajustar el diseño antes de empezar a programar. 
+
+3. Consejos clave
+    * __Mantenlo vivo:__ El TDD no es estático; actualízalo a medida que el proyecto evoluciona para que no quede obsoleto.
+    * __Sé consistente:__ Utiliza la misma terminología y formato en todo el documento para facilitar su lectura.
+    * __No olvides los "No-Objetivos":__ Clarifica qué no estás intentando resolver para evitar que el alcance del proyecto crezca sin control. 
+
+--- 
+<br><br>
+
 [Anterior](?file=Proyectos-Fases-no4-Diseno.md)  [**Principal**](?file=Proyectos-Fases-del-Proceso-de-Dearrollo.md)  [Siguiente](?file=Proyectos-Fases-no5-Analisis-de-Iteracion.md)

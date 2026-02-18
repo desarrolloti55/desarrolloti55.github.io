@@ -1,4 +1,3 @@
-<!-- VS Previes md - Ctrl+Shift+V -->
 # Guia para el desarrollador ante un nuevo proyecto.
 
 *2026-02-11, por Bernardo Q. G.*
@@ -7,8 +6,7 @@
 
 
 ---
-<br>
-<br>
+<br><br>
 
 <center>
 <img src="./assets/images/Roadmap-Proyectos-Analista-Desarrollador.png">
@@ -23,6 +21,7 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 * Lleva siempre una bitacora o historial de lo que haces.
 * Si solo escucho no aprendo, tengo que transcribirlo ya sea parafraceado para captar la informacion de mejor manera.
 * En VideoCursos debe anotar las ideas pricipales como minimo para retener la informacion que se te muestra.
+* Esfurezate para que todo sea entendible para cualquieras hoy y el futuro.
 
 ### PREGUNTAS EN NUEVO PROYECTO
 
@@ -46,8 +45,7 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 ### Documentacion
 
 ---
-<br>
-<br>
+<br><br>
 
 ## Solucion
 
@@ -57,6 +55,7 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 
 ### Ideas por detallar:
 * No reinventar la rueda, a menos que sea para aprender.
+* La elegancia del codigo recide en la simplicidad.
 
 ## PR
 
@@ -72,8 +71,7 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 [Sistema Arquitectura](https://castores.notion.site/Sistema-Arquitectura-25a2979ee7e080e6b080db7f823fccf4)
 
 ---
-<br>
-<br>
+<br><br>
 
 ## Validacion
 
