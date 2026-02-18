@@ -3,6 +3,7 @@
 
 *2026-02-11*
 
+[Estándares de la Empresa Castores](https://castores.notion.site/2572979ee7e0807384dbe05fa9443502?v=2572979ee7e080558ba0000ca012b795)
 
 _ESTANDAR Y BUENASPRACTICAS_ [Buenas Practivas Diseño de Interfaces.pdf](https://castores.sharepoint.com/sites/Corporativo/TI/Desarrollo/Documentos%20compartidos/Forms/formatos.aspx?viewid=79ec16e2%2D06e2%2D4f8b%2D98b9%2D16947ed3e402&FolderCTID=0x0120000142917A98A558428D2460F8B31A9904&id=%2Fsites%2FCorporativo%2FTI%2FDesarrollo%2FDocumentos%20compartidos%2FDocumentaci%C3%B3nDesarrollo%2FBuenas%20Practicas%20Dise%C3%B1o%20de%20Interfaces%2Epdf&parent=%2Fsites%2FCorporativo%2FTI%2FDesarrollo%2FDocumentos%20compartidos%2FDocumentaci%C3%B3nDesarrollo)
 

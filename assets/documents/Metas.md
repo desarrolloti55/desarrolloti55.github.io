@@ -49,7 +49,9 @@ Fase  : **8. QA**
 * Java Micro-servicios SpringBoot
 * Pascal
 
-
+### Recursos
+<!-- Consultado 2026-02-17 -->
+[Template de Angular y componentes](http://10.1.33.3/catalogo-componentes/)
 ### Entregables
 
 * Repocitorio en GIT
@@ -59,6 +61,8 @@ Fase  : **8. QA**
 ## Fase actual
 
 Fase  : **4. Diseño**
+
+<!-- https://dbdiagram.io/d/SIAT-PROVEEDORES-67db26c975d75cc844bc21f3 -->
 
 ### Estatus actual : DESIGN SYNTESIS
 
