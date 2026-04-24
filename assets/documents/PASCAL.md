@@ -69,5 +69,24 @@ end;
 ~~~
 
 
+----------
+
+APRENDE COSAS RELACIONA CON EL PROYECTO
+
+PASCAL
+
+program SIAT; { SIAT,dpr }
+
+Una directiva del compilador en Pascal (y Free Pascal) es una instrucción especial incrustada en el código fuente, generalmente entre llaves y con el símbolo de pesos { $... }, que indica al compilador cómo procesar el código. No generan código máquina, sino que configuran opciones de compilación, como el modo de lenguaje, advertencias o compilación condicional.
+
+{$R *.RES}
+
+La directiva {$R *.RES} en Pascal es una directiva del compilador que indica que se debe incluir un archivo de recursos (.res) en el archivo ejecutable final (.exe).
+
+
+Una UNIT (unidad) en Pascal es un módulo independiente de código reutilizable que agrupa constantes, tipos, variables, procedimientos y funciones, permitiendo una programación estructurada, modular y de mayor eficiencia al compilar. Facilita la creación de bibliotecas sin exponer el código fuente y permite el uso de recursos externos mediante uses
+
+
+
 
 

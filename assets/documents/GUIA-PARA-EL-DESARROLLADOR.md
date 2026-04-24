@@ -23,6 +23,9 @@ sin embargo, se debe conocer de que va ser para que hagas un analisis previo y d
 * En VideoCursos debe anotar las ideas pricipales como minimo para retener la informacion que se te muestra.
 * Esfurezate para que todo sea entendible para cualquieras hoy y el futuro.
 * Manten tu mente en orden si no pierdes tiempo y energia, por eso agrego [Objetivos](?file=Objetivos.md) y [Metas](?file=Metas.md).
+* Deshilachando un proceso, cuando ya existe puedes ver la ruta directa, pero para modificaciones es necesario ver hebra a hebra.
+* En un principio es dificil ver que si es necesario y que no, por eso es que debe hacerce un filtrado.
+* Si no ves resultados es probable que no veas la utilidad.
 
 ### PREGUNTAS EN NUEVO PROYECTO
 

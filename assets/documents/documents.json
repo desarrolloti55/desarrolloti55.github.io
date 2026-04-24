@@ -11,6 +11,7 @@
         "Arquitectura-Estandares-y-Calidad.md",
         "Arquitectura-Pull-Request.md",
         "Arquitectura-Shelf-Review.md",
+        "Arquitectura-MicroServicios",
         
         "Proyectos-Fases-del-Proceso-de-Dearrollo.md",
         "Proyectos-Fases-no1-Definicion-de-Proyecto.md",
@@ -22,13 +23,9 @@
 
         "DATOS.md",
         "GIT.md",
-        "PASCAL.md",        
-
+        "PASCAL.md",
         
-        "Tema-Desarrollo-Agnostico.md",
-        "Tema-Design-Syntesis.md",
-        "Tema-DBML.md",
-        "Tema-POO.md",
+        "Tema.md",
         "Recursos-Consultados.md"
     ]
 }
