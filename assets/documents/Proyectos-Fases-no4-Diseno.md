@@ -75,7 +75,7 @@ Un **TDD** sólido debe estar organizado de forma lógica, generalmente bajo est
     * __Sé consistente:__ Utiliza la misma terminología y formato en todo el documento para facilitar su lectura.
     * __No olvides los "No-Objetivos":__ Clarifica qué no estás intentando resolver para evitar que el alcance del proyecto crezca sin control. 
 
-[Receta TDD](?file=Reseta-TDD.md)
+[Receta TDD](?file=Receta-TDD.md)
 
 --- 
 <br><br>
