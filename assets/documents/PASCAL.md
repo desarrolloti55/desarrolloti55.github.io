@@ -1,6 +1,8 @@
 # PASCAL
 
-*2026-02-13*
+*fecha creacion     : 2026-02-13*
+
+*fecha modificacion : 2026-06-08*
 
 > En proceso de redaccion...
 
@@ -10,6 +12,51 @@
 * Asegurar que se guarden los cambios constantemente.
 * El CTRL+z no es buena solucion, se precabido.
 * No elimines, primero comenta y cuando confirmes el funcionamientos, ahora si borra el comentario.
+
+## Principios
+
+* Tipado fuerte, fuerza a declarar el tipo de cada variable lo que hace que los errores bajen.
+* Legibilidad, es bastante facil de leer.
+* Estrucura, sigue un orden rigido para cada etapa de programacion, lo divide en:
+    - Encabezado.
+    - Bloque de declaracion.
+    - Cuerpo del programa.
+
+**Uso en la actualidad** : para la enseñanza de algorinos, conceptos basicos y razonamiento logico, son utilizado empresas tradicionales como sistemas legado.
+
+Los **sistemas legados** (legacy sistem) son programas con tecnologia que ya es obsoleta o antigua, pero que se mantienen en uso por su utilidad.
+
+Se definen legados dado a su resistencia ante la modernizacion y la dificulta en replazarlos o actualizarlos.
+
+## Conceptos Clave
+
+1. Tipado de datos, Simples o Estructurados.
+2. Estrucutra de control: condicionales e iterables.
+3. Modularidad: procedure y function.
+4. Estructura de datos personalizados: type record.
+
+### Tipado de datos
+
+El tipado de datos es fundamental para gestionar la memoria ya que existen variantes para cada uso
+
+#### 1. Tipo de dato Simple (Escalares)
+
+Son aquellos que almacenan un solo valor. Ejemplo Integer, Real, Boolean y Char.
+
+#### 2. Tipo de dato Estructurado
+
+Permiten agrupar multiples valores bajo un mismo identificador.
+
+* String: secuencia de caracteres
+* Arreglos: Coleccion de elementos de un mismo tipo.
+* Registros (Record): Permiten agrupar diferentes tipos de datos sobre un mismo identificador.
+* Conjuntos (Set): Colecciones de elementos del mismo tipo base (generalmente ordinales) sin orden y sin duplicados.
+
+#### 3. Tipado definido por el programador (Tipos personalizados)
+
+* Enumerados (Enumerated): Definen una lista de valores posibles.
+* Subrangos (Subrange): Definen un rango permitido dentro de un tipo existente.
+
 
 ## Variables
 
@@ -26,6 +73,18 @@ name := "Bernardo";
 ## Secciones
 
 En pascal se maneja todo por secciones de definiciones: type, public, private, var, const, implementation, etc.
+
+Pascal obliga a seguir un estructoria bien definida para garantizar la organizacion.
+
+### Estructura Estricta de Bloques
+
+* Sección **uses**: Para importar librerías (unidades).
+* Sección **var**: Declaración de variables globales o locales.
+* Sección **type**: Donde defines tus propios tipos de datos (muy útil para crear estructuras complejas).
+* Sección **const**: Para definir constantes.
+* Sección **begin...end**: El cuerpo del programa o procedimiento.
+
+
 
 ## HERENCIA Y POLIMORFISMO
 
