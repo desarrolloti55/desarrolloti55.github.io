@@ -1,0 +1,24 @@
+info:
+  name: List documents
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{API_URL}}/documents?select=*"
+  headers:
+    - name: apikey
+      value: "{{API_Key}}"
+    - name: Authorization
+      value: Bearer {{API_Key}}
+  params:
+    - name: select
+      value: "*"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

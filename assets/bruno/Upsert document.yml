@@ -1,0 +1,38 @@
+info:
+  name: Upsert document
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{API_URL}}/documents"
+  headers:
+    - name: apikey
+      value: "{{API_Key}}"
+    - name: Authorization
+      value: Bearer {{API_Key}}
+    - name: Content-Type
+      value: application/json
+    - name: Prefer
+      value: resolution=merge-duplicates
+  body:
+    type: json
+    data: |-
+      {
+        "id" : 3,
+        "title": "GIT",
+        "slug": "git",
+        "content": "{{content}}"
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: content
+      value: '# Comandos GIT\r\n\r\n*2026-02-13*\r\n\r\n> En proceso de redaccion...\r\n\r\n\r\nArroba.\r\n~~~\r\n@ = AltGr + q\r\n~~~\r\n\r\n## Borra Archivo con GIT\r\n\r\n~~~\r\ngit rm -f filename1.txt\r\n~~~\r\n\r\n## Resete los cambios de un archivo\r\n\r\n~~~\r\ngit checkout -- .\r\ngit checkout -- filename1.txt\r\n~~~\r\n\r\n## STASH - Almacen temporal de cambios.\r\n\r\nAlmacenado.\r\n~~~\r\ngit stash save \"stash-message\"\r\n~~~\r\n\r\nAlmacenado de archivos especificos.\r\nNota: debe agregar los archivos con git add para que stash lo identifique\r\n~~~\r\ngit stash -m \"stash-message\" -- filename1.txt filename2.txt\u2026\r\n~~~\r\n\r\nListado.\r\n~~~\r\ngit stash list\r\n~~~\r\n\r\nMuestra los cambios.\r\n~~~\r\ngit stash show -p stash@{0}\r\n\r\ngit stash show stash@{0} --name-only\r\n~~~\r\n\r\nAplicado  y Aplicado con limpiado.\r\n~~~\r\ngit stash apply stash@{0}\r\n\r\ngit checkout stash@{1} -- filename1.txt\r\n\r\ngit stash pop stash@{0}\r\n~~~\r\n\r\nEliminacion.\r\n~~~\r\ngit stash drop stash@{0}\r\n~~~\r\n\r\nLimpiado.\r\n~~~\r\ngit stash clear\r\n~~~\r\n\r\n'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
