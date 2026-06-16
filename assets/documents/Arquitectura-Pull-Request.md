@@ -1,12 +1,15 @@
+# Pull Request
 
-<!-- VS Previes md - Ctrl+Shift+V -->
+date: *2026-02-09*
+
+[Base del Conocimiento - Sistema Arquitectura - Flujo de un PR](https://castores.notion.site/Sistema-Arquitectura-25a2979ee7e080e6b080db7f823fccf4)
+
+Nota: Si al querer mandar un PR a revicion no existe el proyecto es necesario que solicites que lo agregen a su catalogo.
+---
+
 ## Formato de Pull Request 2021:
 
-*2026-02-09*
-
-
-
-**Nombre de la rama:** _ Ingresa el nombre de la rama, manteniendo la nomenclatura de DEV-[Propósito de la rama]_
+**Nombre de la rama:** _Ingresa el nombre de la rama, manteniendo la nomenclatura de DEV-[Propósito de la rama]_
 
 **Unificación de la rama:** __master_ **from** _nombre de la rama__
 

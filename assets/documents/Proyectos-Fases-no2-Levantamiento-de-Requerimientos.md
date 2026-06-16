@@ -1,8 +1,8 @@
-<!-- VS Previes md - Ctrl+Shift+V -->
 # 2. Fase de Levantamiento de Requerimientos
 
 *2026-02-11*
 
+> En proceso de redaccion...
 
 ## Requerimientos funcionales y no funcionales
 
@@ -21,3 +21,6 @@ Los _requerimientos no funcionales_ (Calidad) definen **como** de comportarse el
 * usabilidad, 
 * fiabilidad,
 * escalabilidad. 
+
+
+[Anterior](?file=Proyectos-Fases-no1-Definicion-de-Proyecto.md)  [**Principal**](?file=Proyectos-Fases-del-Proceso-de-Dearrollo.md)  [Siguiente](?file=Proyectos-Fases-no3-Analisis.md)

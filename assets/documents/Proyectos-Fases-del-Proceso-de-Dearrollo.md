@@ -209,3 +209,5 @@ registros de cambios.
 4. Desmovilización del equipo: Reasignar recursos y disolver el equipo de proyecto.
 
 El objetivo es garantizar que el cliente quede satisfecho y que el proyecto termine formalmente.
+
+[Siguiente](?file=Proyectos-Fases-no1-Definicion-de-Proyecto.md)
