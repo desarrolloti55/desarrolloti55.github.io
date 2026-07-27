@@ -82,10 +82,12 @@ nav {
     background-color: var(--bg-color-sidebar);
     padding: 1.5rem 1rem;
     overflow-y: auto;
-    border-right: 1px solid #3a3e42;
+    border-right: none;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
     height: calc(100vh - 56px);
     position: sticky;
     top: 56px;
+    
 }
 
 .sidebar_toggle {
@@ -153,15 +155,27 @@ nav {
 }
 
 .main_slug {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-color-muted);
-    font-style: italic;
+    background-color: #3a3e42;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-family: monospace;
 }
 
 .main_title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
     color: var(--primary-color);
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.loading {
+    color: var(--text-color-muted);
+    font-size: 0.9rem;
+    padding: 2rem 0;
 }
 
 /* Footer */

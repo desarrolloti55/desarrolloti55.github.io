@@ -2,11 +2,15 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Contenido para un Analista Desarrollador Agnóstico" />
+        <meta property="og:title" content="DESARROLLO TI 55" />
+        <meta property="og:description" content="Contenido para un Analista Desarrollador Agnóstico" />
+        <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="assets/css/styles.css" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+        <link rel="preconnect" href="https://sakktuvkakmguzffqtwr.supabase.co" />
 
         <!-- zero-md para renderizar markdown -->
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
@@ -14,7 +18,7 @@
         <title>DESARROLLO TI 55</title>
     </head>
     <body>
-        <nav>
+        <nav aria-label="Principal">
             <a href="/" class="nav_brand">DESARROLLO TI 55</a>
         </nav>
 
@@ -33,7 +37,8 @@
                     <p class="main_slug" id="document_slug"></p>
                 </div>
                 <h1 class="main_title" id="document_title"></h1>
-                <zero-md id="content">
+                <p class="loading" id="loading">Cargando...</p>
+                <zero-md id="content" hidden>
                     <template data-append>
                         <link rel="stylesheet" href="assets/css/markdown-styles.css" />
                     </template>
@@ -42,7 +47,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 <a href="https://github.com/desarrolloti55" target="_blank">Desarrollo TI 55</a></p>
+            <p>&copy; 2026 <a href="https://github.com/desarrolloti55" target="_blank" rel="noopener">Desarrollo TI 55</a></p>
         </footer>
 
         <!-- Supabase -->

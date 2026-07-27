@@ -52,22 +52,31 @@ function marcarActivo(slug) {
 }
 
 async function mostrarDocumentoPorSlug(slug) {
+    const loading = document.getElementById('loading');
+    const content = document.getElementById('content');
+
+    loading.hidden = false;
+    content.hidden = true;
+
     const { data, error } = await sb
         .from('documents')
         .select('title, slug, content')
         .eq('slug', slug)
         .single();
 
+    loading.hidden = true;
+    content.hidden = false;
+
     if (error) {
         document.getElementById('document_title').textContent = 'Documento no encontrado';
         document.getElementById('document_slug').textContent = '';
-        document.getElementById('content').src = encodeMarkdown('# 404\nEl documento solicitado no existe.');
+        content.src = encodeMarkdown('# 404\nEl documento solicitado no existe.');
         return;
     }
 
     document.getElementById('document_title').textContent = data.title;
     document.getElementById('document_slug').textContent = data.slug;
-    document.getElementById('content').src = encodeMarkdown(data.content);
+    content.src = encodeMarkdown(data.content);
     document.title = `${data.title} — DESARROLLO TI 55`;
 }
 
