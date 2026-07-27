@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/admin.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+
+        <!-- EasyMDE editor de markdown -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde@2.18.0/dist/easymde.min.css" />
+
+        <title>Admin — DESARROLLO TI 55</title>
+    </head>
+    <body>
+        <nav>
+            <a href="/" class="nav_brand">DESARROLLO TI 55</a>
+            <a href="admin.html" class="nav_link">Admin</a>
+        </nav>
+
+        <div class="admin_layout">
+            <!-- Lista de documentos -->
+            <aside class="admin_sidebar">
+                <h2 class="admin_sidebar_title">Documentos</h2>
+                <button class="btn btn_primary" id="btn_nuevo">+ Nuevo</button>
+                <ul class="admin_list" id="document_list"></ul>
+            </aside>
+
+            <!-- Formulario de edicion -->
+            <main class="admin_main">
+                <form class="admin_form" id="form_documento">
+                    <div class="form_group">
+                        <label for="input_title">Título</label>
+                        <input type="text" id="input_title" placeholder="Título del documento" required />
+                    </div>
+                    <div class="form_group">
+                        <label for="input_slug">Slug</label>
+                        <input type="text" id="input_slug" placeholder="mi-documento" required />
+                    </div>
+                    <div class="form_group form_group_editor">
+                        <label for="input_content">Contenido (Markdown)</label>
+                        <textarea id="input_content"></textarea>
+                    </div>
+                    <div class="form_actions">
+                        <button type="submit" class="btn btn_primary" id="btn_guardar">Guardar</button>
+                        <button type="button" class="btn btn_danger" id="btn_eliminar" hidden>Eliminar</button>
+                        <span class="form_status" id="form_status"></span>
+                    </div>
+                </form>
+            </main>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/easymde@2.18.0/dist/easymde.min.js"></script>
+        <script type="module" src="assets/js/admin.js"></script>
+    </body>
+</html>
