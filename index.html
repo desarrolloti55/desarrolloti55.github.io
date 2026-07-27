@@ -1,64 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>        
+    <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <!-- CSS Styles -->
-        <link rel="stylesheet" href="assets/css/styles.css" />
 
-        <!-- Favicons -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
 
-        <!-- Animate CSS CDN site:https://animate.style/ -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-        <!-- zero-md library -->
+        <!-- zero-md para renderizar markdown -->
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
 
         <title>DESARROLLO TI 55</title>
     </head>
     <body>
-        <!-- Navbar -->
         <nav>
-            <h1>DESARROLLO TI 55</h1>
+            <a href="/" class="nav_brand">DESARROLLO TI 55</a>
         </nav>
 
-        <!-- Main section -->
-        <section class="main_section">
-            <div class="main_div"><p class="">Contenido para un <a href="?file=Tema-Desarrollo-Agnostico.md"><b>Analista Desarrollador Agnóstico</b></a></p></div>            
-        </section>
+        <div class="layout">
+            <!-- Sidebar con lista de documentos -->
+            <aside class="sidebar" id="sidebar">
+                <button class="sidebar_toggle" id="sidebar_toggle" aria-label="Cerrar menu">✕</button>
+                <h2 class="sidebar_title">Documentos</h2>
+                <ul class="sidebar_list" id="document_list"></ul>
+            </aside>
 
-        <!-- Content section -->
-        <section class="content_section">            
-            <div class="content_div">
-                <p class="content_file_path" id="file_path"></p>
-                <zero-md class="content_zero" id="content">
+            <!-- Contenido principal -->
+            <main class="main">
+                <div class="main_header">
+                    <button class="menu_button" id="menu_button" aria-label="Abrir menu">☰</button>
+                    <p class="main_slug" id="document_slug"></p>
+                </div>
+                <h1 class="main_title" id="document_title"></h1>
+                <zero-md id="content">
                     <template data-append>
                         <link rel="stylesheet" href="assets/css/markdown-styles.css" />
                     </template>
                 </zero-md>
-                <ol class="content_files" id="list"></ol>
-            </div>          
-        </section>        
+            </main>
+        </div>
 
-        <!-- Footer section -->
         <footer>
-            <p class="copy">&copy; 2026 <a href="https://github.com/desarrolloti55" target="_blank">Desarrollo TI 55</a></p>
+            <p>&copy; 2026 <a href="https://github.com/desarrolloti55" target="_blank">Desarrollo TI 55</a></p>
         </footer>
-
-        <!-- Website scripts -->
-        <!-- <script src="assets/js/app.js"></script> -->
 
         <!-- Supabase -->
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
         <script type="module" src="assets/js/api.js"></script>
-
-        <!-- Ion icons scripts site:https://ionic.io/ionicons -->
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
-
 </html>
