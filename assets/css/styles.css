@@ -164,12 +164,12 @@ nav {
 }
 
 .main_title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 900;
     margin-bottom: 2rem;
     color: var(--primary-color);
-    border-bottom: none;
-    padding-bottom: 0;
+    border-bottom: 1px solid #3a3e42;
+    padding-bottom: 1rem;
 }
 
 .loading {
