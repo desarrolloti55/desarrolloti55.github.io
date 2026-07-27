@@ -97,7 +97,7 @@ nav ul li {
 
 /** Personalizado **/
 
-.main_secction {
+.main_section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,7 +118,7 @@ nav ul li {
     text-align: center;
 }
 
-.content_secction {
+.content_section {
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
@@ -126,12 +126,12 @@ nav ul li {
     margin: auto;
 }
 
-.content_secction a {
+.content_section a {
     text-decoration: none;
     color: var(--link-color);
     font-size: 0.75rem;
 }
-.content_secction a:hover {
+.content_section a:hover {
     color: var(--secundary-color);
 }
 
@@ -145,6 +145,7 @@ nav ul li {
     font-weight: normal;
     font-style: italic;
     color: var(--text-color-deep);
+    margin-top: 1rem;
 }
 
 footer {

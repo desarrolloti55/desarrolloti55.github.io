@@ -8,3 +8,7 @@
 * Operador de Aserción No Nula (!) : confima que el dato no sera nulo ni unfined para que el compilador no alerte
 * Operador de Asignación Definitiva (!: o !) : evita exijir valor inicial dado que indica que sera asignado por una clase o variable.
 * Operador satisfies : valida que una expresion coincide con un tipo determinado
+
+#### Convención de variables no utilizadas (_)
+
+usar un guion bajo _ como nombre de parámetro es la convención estándar para decir: "Sé que este parámetro existe aquí, pero no lo voy a usar".
