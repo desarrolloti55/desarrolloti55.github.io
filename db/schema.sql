@@ -7,3 +7,6 @@ CREATE TABLE documents (
 );
 TRUNCATE TABLE documents RESTART IDENTITY;
 INSERT INTO documents (title, slug, content) VALUES ('¡Hola mundo!', 'hola-mundo', E'# Hola mundo\nEste es el contenido de mi archivo markdown.');
+
+ALTER TABLE documents ADD COLUMN category TEXT DEFAULT 'General';
+ALTER TABLE documents ADD COLUMN sort_order INTEGER DEFAULT 0;
