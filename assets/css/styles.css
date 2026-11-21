@@ -102,12 +102,6 @@ body::after {
     -webkit-text-fill-color: transparent;
 }
 
-.presentacion__rol {
-    margin: 0.5rem 0 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
 .presentacion__resumen {
     margin: 1rem 0 2rem;
     color: var(--color-texto-suave);

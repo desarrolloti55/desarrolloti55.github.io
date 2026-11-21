@@ -21,7 +21,7 @@ async function cargarPerfil() {
     elementoAvatar.src = `${perfil.avatar_url}&s=${TAMANO_AVATAR}`;
     elementoAvatar.alt = `Foto de perfil de ${nombre}`;
     elementoEnlace.href = perfil.html_url;
-    document.title = `${nombre} | Analista programador`;
+    document.title = nombre;
 
     // bio puede ser null; en ese caso se conserva el resumen del HTML.
     if (perfil.bio) {
