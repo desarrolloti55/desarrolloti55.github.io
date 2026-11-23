@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="black" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Máscara de la fila 2 de la greca: espirales en espejo y desplazadas media celda respecto a la fila 1 -->
+    <defs>
+        <path id="espiral" d="M4 44V4H44V36H12V12H36V28H20V20H28" />
+    </defs>
+    <g transform="translate(0 48)">
+        <path d="M0 44H96" />
+        <use href="#espiral" transform="translate(24 0) scale(-1 1)" />
+        <use href="#espiral" transform="translate(72 0) scale(-1 1)" />
+        <use href="#espiral" transform="translate(120 0) scale(-1 1)" />
+    </g>
+</svg>

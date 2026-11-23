@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="black" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Máscara de la fila 1 de la greca: solo importa la forma, el color lo pone el CSS -->
+    <defs>
+        <!-- Espiral cuadrada de tres vueltas; el espacio entre líneas es de 8 y el trazo de 4 -->
+        <path id="espiral" d="M4 44V4H44V36H12V12H36V28H20V20H28" />
+    </defs>
+    <path d="M0 44H96" />
+    <use href="#espiral" />
+    <use href="#espiral" x="48" />
+</svg>
