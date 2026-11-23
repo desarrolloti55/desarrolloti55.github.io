@@ -1,26 +1,34 @@
+@property --angulo {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
 :root {
-    --color-fondo: #f8fafc;
-    --color-texto: #0f172a;
-    --color-texto-suave: #475569;
-    --color-borde: #e2e8f0;
+    --color-fondo: #f4f6fb;
+    --color-texto: #0b1220;
+    --color-texto-suave: #4b5870;
+    --color-borde: #d9deea;
     --color-superficie: #ffffff;
     --color-acento: #4f46e5;
-    --color-acento-2: #06b6d4;
+    --color-acento-2: #0891b2;
     --color-acento-texto: #ffffff;
-    --opacidad-resplandor: 0.25;
+    --opacidad-resplandor: 0.22;
+    --opacidad-cuadricula: 0.06;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-fondo: #060b18;
+        --color-fondo: #05080f;
         --color-texto: #f1f5f9;
         --color-texto-suave: #94a3b8;
-        --color-borde: #1e293b;
-        --color-superficie: #0f172a;
+        --color-borde: #1d2740;
+        --color-superficie: #0c1322;
         --color-acento: #818cf8;
         --color-acento-2: #22d3ee;
-        --color-acento-texto: #060b18;
-        --opacidad-resplandor: 0.35;
+        --color-acento-texto: #05080f;
+        --opacidad-resplandor: 0.32;
+        --opacidad-cuadricula: 0.05;
     }
 }
 
@@ -39,7 +47,11 @@ body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--color-texto);
-    background: var(--color-fondo);
+    background-color: var(--color-fondo);
+    background-image:
+        linear-gradient(color-mix(in srgb, var(--color-texto) calc(var(--opacidad-cuadricula) * 100%), transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--color-texto) calc(var(--opacidad-cuadricula) * 100%), transparent) 1px, transparent 1px);
+    background-size: 56px 56px;
 }
 
 /* Resplandores de fondo que dan profundidad sin agregar elementos al HTML */
@@ -47,31 +59,38 @@ body::before,
 body::after {
     position: absolute;
     z-index: 0;
-    width: 28rem;
-    height: 28rem;
+    width: 30rem;
+    height: 30rem;
     border-radius: 50%;
-    filter: blur(90px);
+    filter: blur(110px);
     opacity: var(--opacidad-resplandor);
     content: "";
 }
 
 body::before {
-    top: -8rem;
-    left: -8rem;
+    top: -10rem;
+    left: -10rem;
     background: var(--color-acento);
 }
 
 body::after {
-    right: -8rem;
-    bottom: -8rem;
+    right: -10rem;
+    bottom: -10rem;
     background: var(--color-acento-2);
 }
 
 .presentacion {
     position: relative;
     z-index: 1;
-    max-width: 36rem;
+    width: min(100%, 34rem);
+    padding: 3rem 2.5rem;
+    overflow: hidden;
     text-align: center;
+    border: 1px solid var(--color-borde);
+    border-radius: 1.75rem;
+    background: color-mix(in srgb, var(--color-superficie) 70%, transparent);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px -30px color-mix(in srgb, var(--color-acento) 45%, transparent);
     opacity: 0;
     /* Respaldo: si el script no carga o la API tarda, el contenido aparece solo a los 2.5 s. */
     animation: aparecer-respaldo 0.8s ease 2.5s forwards;
@@ -81,37 +100,55 @@ body::after {
     animation: aparecer 0.8s ease forwards;
 }
 
+/* Foco de luz que sigue al cursor; --x e --y los actualiza efectos.js. */
+.presentacion::before {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        22rem circle at var(--x, 50%) var(--y, 0%),
+        color-mix(in srgb, var(--color-acento) 22%, transparent),
+        transparent 65%
+    );
+    pointer-events: none;
+    content: "";
+}
+
+.presentacion > * {
+    position: relative;
+}
+
 .presentacion__avatar {
-    padding: 4px;
+    padding: 5px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-acento), var(--color-acento-2));
-    box-shadow: 0 0 40px color-mix(in srgb, var(--color-acento) 45%, transparent);
+    background: conic-gradient(from var(--angulo), var(--color-acento), var(--color-acento-2), var(--color-acento));
+    box-shadow: 0 0 50px color-mix(in srgb, var(--color-acento) 50%, transparent);
+    animation: girar 8s linear infinite;
 }
 
 .presentacion__saludo {
-    margin: 1.5rem 0 0;
+    margin: 1.75rem 0 0;
     color: var(--color-texto-suave);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
 }
 
 .presentacion__nombre {
     margin: 0.25rem 0 0;
-    font-size: clamp(2.25rem, 9vw, 4rem);
+    font-size: clamp(2.25rem, 9vw, 3.75rem);
     font-weight: 800;
     line-height: 1.1;
-    letter-spacing: -0.02em;
-    background: linear-gradient(90deg, var(--color-acento), var(--color-acento-2));
+    letter-spacing: -0.03em;
+    background: linear-gradient(90deg, var(--color-texto), var(--color-acento) 55%, var(--color-acento-2));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .presentacion__resumen {
-    margin: 1rem 0 2rem;
+    margin: 1.25rem 0 2rem;
     color: var(--color-texto-suave);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .presentacion__titular {
@@ -129,25 +166,34 @@ body::after {
 }
 
 .boton {
-    padding: 0.7rem 1.5rem;
+    padding: 0.75rem 1.6rem;
     border: 1px solid var(--color-borde);
     border-radius: 999px;
     color: var(--color-texto);
     background: var(--color-superficie);
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.boton:hover {
+.boton:hover,
+.boton:focus-visible {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px color-mix(in srgb, var(--color-acento) 30%, transparent);
+    border-color: var(--color-acento);
+    box-shadow: 0 10px 28px color-mix(in srgb, var(--color-acento) 35%, transparent);
+    outline: none;
 }
 
 .boton--primario {
     border-color: transparent;
     color: var(--color-acento-texto);
     background: linear-gradient(90deg, var(--color-acento), var(--color-acento-2));
+}
+
+@keyframes girar {
+    to {
+        --angulo: 360deg;
+    }
 }
 
 @keyframes aparecer {
@@ -182,7 +228,17 @@ body::after {
         animation: none;
     }
 
+    .presentacion__avatar {
+        animation: none;
+    }
+
     .boton {
         transition: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentacion {
+        padding: 2.25rem 1.5rem;
     }
 }
