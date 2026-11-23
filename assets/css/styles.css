@@ -47,7 +47,7 @@ body {
     background-color: var(--color-fondo);
     /* Greca (clave griega) repetida en todo el fondo, como en las civilizaciones antiguas. */
     background-image: url("../images/greca.svg");
-    background-size: 64px 64px;
+    background-size: 96px 88px;
 }
 
 .presentacion {
