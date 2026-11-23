@@ -45,9 +45,22 @@ body {
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    /* Greca (clave griega) repetida en todo el fondo, como en las civilizaciones antiguas. */
+}
+
+/* Greca (clave griega) en diagonal: la capa se gira y se extiende más allá de la ventana
+   para que el patrón cubra todo el fondo sin huecos en las esquinas. */
+body::before {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    width: 200vmax;
+    height: 200vmax;
     background-image: url("../images/greca.svg");
-    background-size: 96px 88px;
+    background-size: 96px 176px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    pointer-events: none;
+    content: "";
 }
 
 .presentacion {

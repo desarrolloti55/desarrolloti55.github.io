@@ -1,21 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="96" height="88" viewBox="0 0 96 88" fill="none" stroke-linecap="square" stroke-linejoin="miter">
-    <!-- Filetes dorados y fila de dentículos que enmarcan la hilera -->
-    <g stroke="#d4a23a" stroke-opacity="0.45">
-        <path d="M0 5 H96" stroke-width="3" />
-        <path d="M0 11 H96" stroke-width="1.5" />
-        <path d="M0 83 H96" stroke-width="3" />
-        <path d="M0 77 H96" stroke-width="1.5" />
-    </g>
-    <g fill="#d4a23a" fill-opacity="0.35" stroke="none">
-        <rect x="10" y="16" width="4" height="4" />
-        <rect x="34" y="16" width="4" height="4" />
-        <rect x="58" y="16" width="4" height="4" />
-        <rect x="82" y="16" width="4" height="4" />
-    </g>
-    <!-- Greca doble: dos espirales cuadradas encontradas sobre una línea base continua -->
-    <g stroke="#2bb8c9" stroke-opacity="0.5" stroke-width="2.5">
-        <path d="M0 68 H96" />
-        <path d="M8 68 V28 H40 V56 H20 V40 H30 V48" />
-        <path d="M88 68 V28 H56 V56 H76 V40 H66 V48" />
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="176" viewBox="0 0 96 176" fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <defs>
+        <!-- Una hilera: filetes dorados, dentículos y doble espiral sobre una línea base continua -->
+        <g id="hilera">
+            <g stroke="#d4a23a" stroke-opacity="0.45">
+                <path d="M0 5 H96" stroke-width="3" />
+                <path d="M0 11 H96" stroke-width="1.5" />
+                <path d="M0 83 H96" stroke-width="3" />
+                <path d="M0 77 H96" stroke-width="1.5" />
+            </g>
+            <g fill="#d4a23a" fill-opacity="0.35" stroke="none">
+                <rect x="10" y="16" width="4" height="4" />
+                <rect x="34" y="16" width="4" height="4" />
+                <rect x="58" y="16" width="4" height="4" />
+                <rect x="82" y="16" width="4" height="4" />
+            </g>
+            <g stroke="#2bb8c9" stroke-opacity="0.5" stroke-width="2.5">
+                <path d="M0 68 H96" />
+                <path d="M8 68 V28 H40 V56 H20 V40 H30 V48" />
+                <path d="M88 68 V28 H56 V56 H76 V40 H66 V48" />
+            </g>
+        </g>
+    </defs>
+    <!-- Hilera superior y su reflejo: los filetes de ambas se enfrentan y las espirales quedan en espejo -->
+    <use href="#hilera" xlink:href="#hilera" />
+    <use href="#hilera" xlink:href="#hilera" transform="translate(0 176) scale(1 -1)" />
 </svg>
