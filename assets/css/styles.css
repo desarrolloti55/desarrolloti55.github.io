@@ -49,36 +49,33 @@ body {
     background-color: var(--color-fondo);
 }
 
-/* Greca (clave griega) en diagonal, con las hileras dispuestas en espejo para que encajen.
+/* Greca de trazo grueso: espirales cuadradas encajadas sobre una línea base continua.
+   Las filas se alternan en espejo y desplazadas media celda, una en oro y otra en cian.
    Cada capa usa su dibujo como máscara y se pinta con el color del tema, así el patrón
    conserva contraste en el tema claro y en el oscuro. Los dibujos van como data URI porque
    Chrome bloquea las máscaras de archivos locales (file://). */
 body::before,
 body::after {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    inset: 0;
     z-index: 0;
-    width: 200vmax;
-    height: 200vmax;
     opacity: var(--opacidad-patron);
-    -webkit-mask-size: 144px 336px;
-    mask-size: 144px 336px;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-mask-size: 144px 144px;
+    mask-size: 144px 144px;
     pointer-events: none;
     content: "";
 }
 
 body::before {
-    background-color: var(--atlantis-cristal);
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='224' viewBox='0 0 96 224' fill='none' stroke='black' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='f' d='M3 18V5H21V13H9V9H15V11'/%3E%3C/defs%3E%3Cg stroke-width='2.5'%3E%3Cpath d='M0 2H96M0 46H96'/%3E%3C/g%3E%3Cpath stroke-width='3' d='M0 40H96'/%3E%3Cg transform='translate(0 54)'%3E%3Cpath stroke-width='2' d='M0 18H96'/%3E%3Cuse href='%23f' x='0'/%3E%3Cuse href='%23f' x='24'/%3E%3Cuse href='%23f' x='48'/%3E%3Cuse href='%23f' x='72'/%3E%3C/g%3E%3Cg transform='translate(0 84)'%3E%3Cpath stroke-width='2.5' d='M0 8q6 -7 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0'/%3E%3C/g%3E%3Cg transform='translate(0 128)'%3E%3Cpath stroke-width='2.5' d='M0 14V3H8V14H16V3H24V14H32V3H40V14H48V3H56V14H64V3H72V14H80V3H88V14H96'/%3E%3C/g%3E%3Cg transform='translate(0 188) scale(1 -1)'%3E%3Cpath stroke-width='2.5' d='M0 8q6 -7 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0'/%3E%3C/g%3E%3Cg transform='translate(0 218) scale(1 -1)'%3E%3Cpath stroke-width='2' d='M0 18H96'/%3E%3Cuse href='%23f' x='0'/%3E%3Cuse href='%23f' x='24'/%3E%3Cuse href='%23f' x='48'/%3E%3Cuse href='%23f' x='72'/%3E%3C/g%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='224' viewBox='0 0 96 224' fill='none' stroke='black' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='f' d='M3 18V5H21V13H9V9H15V11'/%3E%3C/defs%3E%3Cg stroke-width='2.5'%3E%3Cpath d='M0 2H96M0 46H96'/%3E%3C/g%3E%3Cpath stroke-width='3' d='M0 40H96'/%3E%3Cg transform='translate(0 54)'%3E%3Cpath stroke-width='2' d='M0 18H96'/%3E%3Cuse href='%23f' x='0'/%3E%3Cuse href='%23f' x='24'/%3E%3Cuse href='%23f' x='48'/%3E%3Cuse href='%23f' x='72'/%3E%3C/g%3E%3Cg transform='translate(0 84)'%3E%3Cpath stroke-width='2.5' d='M0 8q6 -7 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0'/%3E%3C/g%3E%3Cg transform='translate(0 128)'%3E%3Cpath stroke-width='2.5' d='M0 14V3H8V14H16V3H24V14H32V3H40V14H48V3H56V14H64V3H72V14H80V3H88V14H96'/%3E%3C/g%3E%3Cg transform='translate(0 188) scale(1 -1)'%3E%3Cpath stroke-width='2.5' d='M0 8q6 -7 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0'/%3E%3C/g%3E%3Cg transform='translate(0 218) scale(1 -1)'%3E%3Cpath stroke-width='2' d='M0 18H96'/%3E%3Cuse href='%23f' x='0'/%3E%3Cuse href='%23f' x='24'/%3E%3Cuse href='%23f' x='48'/%3E%3Cuse href='%23f' x='72'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--atlantis-oro);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' x='48'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' x='48'/%3E%3C/svg%3E");
 }
 
 body::after {
-    background-color: var(--atlantis-oro);
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='224' viewBox='0 0 96 224' fill='none' stroke='black' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='g' d='M6 40V10H42V32H18V20H30V26'/%3E%3Cpath id='h' d='M3 8L8 3M3 8L8 13'/%3E%3C/defs%3E%3Cg stroke-width='3'%3E%3Cuse href='%23g' x='0'/%3E%3Cuse href='%23g' x='48'/%3E%3C/g%3E%3Cg transform='translate(0 54)'%3E%3Cpath stroke-width='1.5' d='M0 1H96M0 23H96'/%3E%3C/g%3E%3Cg transform='translate(0 84)'%3E%3Cpath stroke-width='2' d='M0 1H96M0 15H96'/%3E%3C/g%3E%3Cg transform='translate(0 106)'%3E%3Cg stroke-width='2'%3E%3Cpath d='M0 8H96'/%3E%3Cuse href='%23h' x='0'/%3E%3Cuse href='%23h' x='12'/%3E%3Cuse href='%23h' x='24'/%3E%3Cuse href='%23h' x='36'/%3E%3Cuse href='%23h' x='48'/%3E%3Cuse href='%23h' x='60'/%3E%3Cuse href='%23h' x='72'/%3E%3Cuse href='%23h' x='84'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(0 166) scale(1 -1)'%3E%3Cg stroke-width='2'%3E%3Cpath d='M0 8H96'/%3E%3Cuse href='%23h' x='0'/%3E%3Cuse href='%23h' x='12'/%3E%3Cuse href='%23h' x='24'/%3E%3Cuse href='%23h' x='36'/%3E%3Cuse href='%23h' x='48'/%3E%3Cuse href='%23h' x='60'/%3E%3Cuse href='%23h' x='72'/%3E%3Cuse href='%23h' x='84'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(0 188) scale(1 -1)'%3E%3Cpath stroke-width='2' d='M0 1H96M0 15H96'/%3E%3C/g%3E%3Cg transform='translate(0 218) scale(1 -1)'%3E%3Cpath stroke-width='1.5' d='M0 1H96M0 23H96'/%3E%3C/g%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='224' viewBox='0 0 96 224' fill='none' stroke='black' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='g' d='M6 40V10H42V32H18V20H30V26'/%3E%3Cpath id='h' d='M3 8L8 3M3 8L8 13'/%3E%3C/defs%3E%3Cg stroke-width='3'%3E%3Cuse href='%23g' x='0'/%3E%3Cuse href='%23g' x='48'/%3E%3C/g%3E%3Cg transform='translate(0 54)'%3E%3Cpath stroke-width='1.5' d='M0 1H96M0 23H96'/%3E%3C/g%3E%3Cg transform='translate(0 84)'%3E%3Cpath stroke-width='2' d='M0 1H96M0 15H96'/%3E%3C/g%3E%3Cg transform='translate(0 106)'%3E%3Cg stroke-width='2'%3E%3Cpath d='M0 8H96'/%3E%3Cuse href='%23h' x='0'/%3E%3Cuse href='%23h' x='12'/%3E%3Cuse href='%23h' x='24'/%3E%3Cuse href='%23h' x='36'/%3E%3Cuse href='%23h' x='48'/%3E%3Cuse href='%23h' x='60'/%3E%3Cuse href='%23h' x='72'/%3E%3Cuse href='%23h' x='84'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(0 166) scale(1 -1)'%3E%3Cg stroke-width='2'%3E%3Cpath d='M0 8H96'/%3E%3Cuse href='%23h' x='0'/%3E%3Cuse href='%23h' x='12'/%3E%3Cuse href='%23h' x='24'/%3E%3Cuse href='%23h' x='36'/%3E%3Cuse href='%23h' x='48'/%3E%3Cuse href='%23h' x='60'/%3E%3Cuse href='%23h' x='72'/%3E%3Cuse href='%23h' x='84'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(0 188) scale(1 -1)'%3E%3Cpath stroke-width='2' d='M0 1H96M0 15H96'/%3E%3C/g%3E%3Cg transform='translate(0 218) scale(1 -1)'%3E%3Cpath stroke-width='1.5' d='M0 1H96M0 23H96'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--atlantis-cristal);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cg transform='translate(0 48)'%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k' transform='translate(24 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(72 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(120 0) scale(-1 1)'/%3E%3C/g%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cg transform='translate(0 48)'%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k' transform='translate(24 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(72 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(120 0) scale(-1 1)'/%3E%3C/g%3E%3C/svg%3E");
 }
 .presentacion {
     position: relative;
