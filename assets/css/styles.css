@@ -15,7 +15,7 @@
     --color-acento: var(--atlantis-cristal);
     --color-acento-2: var(--atlantis-oro);
     --color-acento-texto: #ffffff;
-    --opacidad-patron: 0.5;
+    --opacidad-patron: 0.28;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +28,7 @@
         --color-borde: #123142;
         --color-superficie: #07202e;
         --color-acento-texto: #031019;
-        --opacidad-patron: 0.55;
+        --opacidad-patron: 0.3;
         }
 }
 
@@ -52,8 +52,8 @@ body {
 /* Greca de trazo grueso: espirales cuadradas encajadas sobre una línea base continua.
    Las filas se alternan en espejo y desplazadas media celda, una en oro y otra en cian.
    Cada capa usa su dibujo como máscara y se pinta con el color del tema, así el patrón
-   conserva contraste en el tema claro y en el oscuro. Los dibujos van como data URI porque
-   Chrome bloquea las máscaras de archivos locales (file://). */
+   conserva contraste en el tema claro y en el oscuro. Las máscaras SVG necesitan servirse
+   por http(s): Chrome las bloquea al abrir el HTML directamente desde el disco (file://). */
 body::before,
 body::after {
     position: fixed;
@@ -68,14 +68,14 @@ body::after {
 
 body::before {
     background-color: var(--atlantis-oro);
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' x='48'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k'/%3E%3Cuse href='%23k' x='48'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("../images/greca-oro.svg");
+    mask-image: url("../images/greca-oro.svg");
 }
 
 body::after {
     background-color: var(--atlantis-cristal);
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cg transform='translate(0 48)'%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k' transform='translate(24 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(72 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(120 0) scale(-1 1)'/%3E%3C/g%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cdefs%3E%3Cpath id='k' d='M4 44V4H44V36H12V12H36V28H20V20H28'/%3E%3C/defs%3E%3Cg transform='translate(0 48)'%3E%3Cpath d='M0 44H96'/%3E%3Cuse href='%23k' transform='translate(24 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(72 0) scale(-1 1)'/%3E%3Cuse href='%23k' transform='translate(120 0) scale(-1 1)'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask-image: url("../images/greca-cian.svg");
+    mask-image: url("../images/greca-cian.svg");
 }
 .presentacion {
     position: relative;
@@ -87,9 +87,11 @@ body::after {
     text-align: center;
     border: 1px solid var(--color-borde);
     border-radius: 1.75rem;
-    background: color-mix(in srgb, var(--color-superficie) 70%, transparent);
+    background: color-mix(in srgb, var(--color-superficie) 84%, transparent);
     backdrop-filter: blur(18px);
-    box-shadow: 0 30px 80px -30px color-mix(in srgb, var(--color-acento) 45%, transparent);
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, var(--color-texto) 10%, transparent),
+        0 30px 80px -30px color-mix(in srgb, var(--color-acento) 45%, transparent);
     opacity: 0;
     /* Respaldo: si el script no carga o la API tarda, el contenido aparece solo a los 2.5 s. */
     animation: aparecer-respaldo 0.8s ease 2.5s forwards;
@@ -109,6 +111,17 @@ body::after {
         transparent 65%
     );
     pointer-events: none;
+    content: "";
+}
+
+/* Barra superior con los dos colores de acento */
+.presentacion::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-acento), var(--color-acento-2));
     content: "";
 }
 
@@ -146,6 +159,7 @@ body::after {
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.03em;
+    text-wrap: balance;
     background: linear-gradient(90deg, var(--color-texto), var(--color-acento) 55%, var(--color-acento-2));
     -webkit-background-clip: text;
     background-clip: text;
@@ -153,9 +167,11 @@ body::after {
 }
 
 .presentacion__resumen {
-    margin: 1.25rem 0 2rem;
+    max-width: 27rem;
+    margin: 1.25rem auto 2rem;
     color: var(--color-texto-suave);
     font-size: 1.05rem;
+    text-wrap: balance;
 }
 
 .presentacion__titular {
@@ -173,6 +189,9 @@ body::after {
 }
 
 .boton {
+    display: inline-flex;
+    gap: 0.6rem;
+    align-items: center;
     padding: 0.75rem 1.6rem;
     border: 1px solid var(--color-borde);
     border-radius: 999px;
