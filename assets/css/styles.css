@@ -15,7 +15,6 @@
     --color-acento: var(--atlantis-cristal);
     --color-acento-2: var(--atlantis-oro);
     --color-acento-texto: #ffffff;
-    --opacidad-resplandor: 0.22;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,8 +27,7 @@
         --color-borde: #123142;
         --color-superficie: #07202e;
         --color-acento-texto: #031019;
-        --opacidad-resplandor: 0.32;
-    }
+        }
 }
 
 * {
@@ -39,13 +37,10 @@
 body {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     min-height: 100dvh;
     margin: 0;
     padding: 1.5rem;
-    overflow: hidden;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--color-texto);
@@ -55,36 +50,12 @@ body {
     background-size: 200px 200px;
 }
 
-/* Resplandores de fondo que dan profundidad sin agregar elementos al HTML */
-body::before,
-body::after {
-    position: absolute;
-    z-index: 0;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50%;
-    filter: blur(110px);
-    opacity: var(--opacidad-resplandor);
-    content: "";
-}
-
-body::before {
-    top: -10rem;
-    left: -10rem;
-    background: var(--color-acento);
-}
-
-body::after {
-    right: -10rem;
-    bottom: -10rem;
-    background: var(--color-acento-2);
-}
-
 .presentacion {
     position: relative;
     z-index: 1;
     width: min(100%, 34rem);
-    padding: 3rem 2.5rem;
+    margin: auto;
+    padding: clamp(1.5rem, 5vh, 3rem) 2.5rem;
     overflow: hidden;
     text-align: center;
     border: 1px solid var(--color-borde);
@@ -119,6 +90,9 @@ body::after {
 }
 
 .presentacion__avatar {
+    width: clamp(8rem, 26vh, 13rem);
+    height: auto;
+    aspect-ratio: 1;
     padding: 5px;
     border-radius: 50%;
     background: conic-gradient(
@@ -132,7 +106,7 @@ body::after {
 }
 
 .presentacion__saludo {
-    margin: 1.75rem 0 0;
+    margin: clamp(1rem, 3vh, 1.75rem) 0 0;
     color: var(--color-texto-suave);
     letter-spacing: 0.3em;
     text-transform: uppercase;
