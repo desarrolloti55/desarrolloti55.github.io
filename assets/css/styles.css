@@ -5,30 +5,34 @@
 }
 
 :root {
-    --color-fondo: #f4f6fb;
-    --color-texto: #0b1220;
-    --color-texto-suave: #4b5870;
-    --color-borde: #d9deea;
-    --color-superficie: #ffffff;
-    --color-acento: #4f46e5;
-    --color-acento-2: #0891b2;
+    --elemento-fuego: #e8590c;
+    --elemento-agua: #1c7ed6;
+    --elemento-tierra: #4f9a2f;
+    --elemento-aire: #f0c75e;
+    --color-fondo: #fbf6ea;
+    --color-texto: #1f2430;
+    --color-texto-suave: #5b6070;
+    --color-borde: #e6dcc3;
+    --color-superficie: #fffdf7;
+    --color-acento: var(--elemento-fuego);
+    --color-acento-2: var(--elemento-agua);
     --color-acento-texto: #ffffff;
     --opacidad-resplandor: 0.22;
-    --opacidad-cuadricula: 0.06;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-fondo: #05080f;
-        --color-texto: #f1f5f9;
-        --color-texto-suave: #94a3b8;
-        --color-borde: #1d2740;
-        --color-superficie: #0c1322;
-        --color-acento: #818cf8;
-        --color-acento-2: #22d3ee;
-        --color-acento-texto: #05080f;
-        --opacidad-resplandor: 0.32;
-        --opacidad-cuadricula: 0.05;
+        --elemento-fuego: #ff8a3d;
+        --elemento-agua: #4dabf7;
+        --elemento-tierra: #8ad05b;
+        --elemento-aire: #f5dc8f;
+        --color-fondo: #0a1018;
+        --color-texto: #f4efe3;
+        --color-texto-suave: #a3a9b8;
+        --color-borde: #243044;
+        --color-superficie: #0f1823;
+        --color-acento-texto: #0a1018;
+        --opacidad-resplandor: 0.3;
     }
 }
 
@@ -40,18 +44,19 @@ body {
     position: relative;
     display: grid;
     min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
     padding: 1.5rem;
+    place-content: center;
     place-items: center;
     overflow: hidden;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    background-image:
-        linear-gradient(color-mix(in srgb, var(--color-texto) calc(var(--opacidad-cuadricula) * 100%), transparent) 1px, transparent 1px),
-        linear-gradient(90deg, color-mix(in srgb, var(--color-texto) calc(var(--opacidad-cuadricula) * 100%), transparent) 1px, transparent 1px);
-    background-size: 56px 56px;
+    /* Patrón con los cuatro elementos: agua, tierra, fuego y aire. */
+    background-image: url("../images/elementos.svg");
+    background-size: 180px 180px;
 }
 
 /* Resplandores de fondo que dan profundidad sin agregar elementos al HTML */
@@ -120,7 +125,14 @@ body::after {
 .presentacion__avatar {
     padding: 5px;
     border-radius: 50%;
-    background: conic-gradient(from var(--angulo), var(--color-acento), var(--color-acento-2), var(--color-acento));
+    background: conic-gradient(
+        from var(--angulo),
+        var(--elemento-fuego),
+        var(--elemento-aire),
+        var(--elemento-tierra),
+        var(--elemento-agua),
+        var(--elemento-fuego)
+    );
     box-shadow: 0 0 50px color-mix(in srgb, var(--color-acento) 50%, transparent);
     animation: girar 8s linear infinite;
 }
