@@ -72,7 +72,13 @@ body::after {
     z-index: 1;
     max-width: 36rem;
     text-align: center;
-    animation: aparecer 0.8s ease both;
+    opacity: 0;
+    /* Respaldo: si el script no carga o la API tarda, el contenido aparece solo a los 2.5 s. */
+    animation: aparecer-respaldo 0.8s ease 2.5s forwards;
+}
+
+.presentacion--visible {
+    animation: aparecer 0.8s ease forwards;
 }
 
 .presentacion__avatar {
@@ -156,8 +162,23 @@ body::after {
     }
 }
 
+/* Misma animación con otro nombre para que cambiar de clase la reinicie. */
+@keyframes aparecer-respaldo {
+    from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .presentacion {
+    .presentacion,
+    .presentacion--visible {
+        opacity: 1;
         animation: none;
     }
 
