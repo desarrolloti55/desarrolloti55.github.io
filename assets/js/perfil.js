@@ -1,15 +1,15 @@
-const USUARIO_GITHUB = "desarrolloti55";
-const URL_API_USUARIO = `https://api.github.com/users/${USUARIO_GITHUB}`;
+// Datos del perfil en un archivo propio, que se edita a mano; evita el límite de la API pública de GitHub.
+const URL_PERFIL = "assets/data/perfil.json";
 const TAMANO_AVATAR = 256;
 const TAMANO_ICONO = 64;
 const SEPARADOR_BIO = "|";
 const CLASE_VISIBLE = "presentacion--visible";
 
-// El HTML ya trae valores por defecto; si la API falla o se agota el límite, la página sigue completa.
+// El HTML ya trae valores por defecto; si el archivo no carga, la página sigue completa.
 async function cargarPerfil() {
-    const respuesta = await fetch(URL_API_USUARIO);
+    const respuesta = await fetch(URL_PERFIL);
     if (!respuesta.ok) {
-        throw new Error(`GitHub respondió ${respuesta.status}`);
+        throw new Error(`No se pudo leer ${URL_PERFIL}: ${respuesta.status}`);
     }
     const perfil = await respuesta.json();
 
@@ -51,10 +51,10 @@ function mostrarBio(elementoResumen, bio) {
 }
 
 // La página permanece oculta hasta tener los datos reales para no mostrar el nombre base un instante.
-// Si la API falla se muestra igual con los valores por defecto del HTML.
+// Si el archivo falla se muestra igual con los valores por defecto del HTML.
 cargarPerfil()
     .catch((error) => {
-        console.warn("No se pudo cargar el perfil de GitHub, se muestran los datos por defecto.", error);
+        console.warn("No se pudo cargar el perfil, se muestran los datos por defecto.", error);
     })
     .finally(() => {
         document.querySelector(".presentacion").classList.add(CLASE_VISIBLE);
