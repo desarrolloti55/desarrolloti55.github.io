@@ -108,6 +108,13 @@ body::after {
     font-size: 1.1rem;
 }
 
+.presentacion__titular {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--color-texto);
+    font-size: 1.25rem;
+}
+
 .presentacion__acciones {
     display: flex;
     flex-wrap: wrap;

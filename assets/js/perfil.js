@@ -1,6 +1,7 @@
 const USUARIO_GITHUB = "desarrolloti55";
 const URL_API_USUARIO = `https://api.github.com/users/${USUARIO_GITHUB}`;
 const TAMANO_AVATAR = 256;
+const SEPARADOR_BIO = "|";
 
 // El HTML ya trae valores por defecto; si la API falla o se agota el límite, la página sigue completa.
 async function cargarPerfil() {
@@ -25,8 +26,25 @@ async function cargarPerfil() {
 
     // bio puede ser null; en ese caso se conserva el resumen del HTML.
     if (perfil.bio) {
-        elementoResumen.textContent = perfil.bio;
+        mostrarBio(elementoResumen, perfil.bio);
     }
+}
+
+// GitHub solo permite texto plano en una línea, así que el separador "|" se convierte aquí en
+// salto de línea y negrita. Se arman nodos en lugar de usar innerHTML porque la bio es texto externo.
+function mostrarBio(elementoResumen, bio) {
+    const [titular, ...lstRestoBio] = bio.split(SEPARADOR_BIO).map((parte) => parte.trim());
+    elementoResumen.replaceChildren();
+
+    if (lstRestoBio.length === 0) {
+        elementoResumen.textContent = titular;
+        return;
+    }
+
+    const elementoTitular = document.createElement("strong");
+    elementoTitular.className = "presentacion__titular";
+    elementoTitular.textContent = titular;
+    elementoResumen.append(elementoTitular, lstRestoBio.join(` ${SEPARADOR_BIO} `));
 }
 
 cargarPerfil().catch((error) => {
