@@ -45,9 +45,9 @@ body {
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    /* Patrón de glifos geométricos inspirados en una ciudad submarina. */
-    background-image: url("../images/glifos-atlantis.svg");
-    background-size: 200px 200px;
+    /* Greca (clave griega) repetida en todo el fondo, como en las civilizaciones antiguas. */
+    background-image: url("../images/greca.svg");
+    background-size: 64px 64px;
 }
 
 .presentacion {

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" stroke-opacity="0.3">
+    <!-- Filetes dorados que enmarcan cada hilera de grecas -->
+    <g stroke="#d4a23a">
+        <path d="M0 4 H64" />
+        <path d="M0 8 H64" />
+    </g>
+    <!-- Greca clásica (clave griega): espiral cuadrada que se repite sin cortes -->
+    <g stroke="#2bb8c9">
+        <path d="M0 56 H8 V16 H56 V48 H24 V32 H40 V40" />
+        <path d="M56 56 H64" />
+    </g>
+</svg>
