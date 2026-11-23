@@ -15,6 +15,7 @@
     --color-acento: var(--atlantis-cristal);
     --color-acento-2: var(--atlantis-oro);
     --color-acento-texto: #ffffff;
+    --opacidad-patron: 0.5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +28,7 @@
         --color-borde: #123142;
         --color-superficie: #07202e;
         --color-acento-texto: #031019;
+        --opacidad-patron: 0.55;
         }
 }
 
@@ -47,17 +49,35 @@ body {
     background-color: var(--color-fondo);
 }
 
-/* Bordado de rombos escalonados (estilo punto de cruz) repetido en todo el fondo. */
-body::before {
+/* Bordado de rombos escalonados (estilo punto de cruz) repetido en todo el fondo.
+   Cada capa usa el dibujo como máscara y se pinta con el color del tema, así el patrón
+   mantiene contraste en el tema claro y en el oscuro. Los dibujos van como data URI porque
+   Chrome bloquea las máscaras de archivos locales (file://). */
+body::before,
+body::after {
     position: fixed;
     inset: 0;
     z-index: 0;
-    background-image: url("../images/greca.svg");
-    background-size: 96px 96px;
-    background-position: center;
+    opacity: var(--opacidad-patron);
+    -webkit-mask-size: 96px 96px;
+    mask-size: 96px 96px;
+    -webkit-mask-position: center;
+    mask-position: center;
     image-rendering: pixelated;
     pointer-events: none;
     content: "";
+}
+
+body::before {
+    background-color: var(--atlantis-cristal);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' shape-rendering='crispEdges'%3E%3Cpath d='M12 0h8v4h-8zM44 0h8v4h-8zM76 0h8v4h-8zM8 4h8v4h-8zM40 4h16v4h-16zM80 4h8v4h-8zM4 8h8v4h-8zM36 8h24v4h-24zM84 8h8v4h-8zM0 12h8v4h-8zM32 12h12v4h-12zM52 12h12v4h-12zM88 12h8v4h-8zM0 16h4v4h-4zM28 16h12v4h-12zM56 16h12v4h-12zM92 16h4v4h-4zM24 20h12v4h-12zM60 20h12v4h-12zM20 24h12v4h-12zM64 24h12v4h-12zM16 28h12v4h-12zM68 28h12v4h-12zM12 32h12v4h-12zM72 32h12v4h-12zM8 36h12v4h-12zM44 36h8v4h-8zM76 36h12v4h-12zM4 40h12v4h-12zM44 40h8v4h-8zM80 40h12v4h-12zM0 44h12v4h-12zM36 44h24v4h-24zM84 44h12v4h-12zM0 48h12v4h-12zM36 48h24v4h-24zM84 48h12v4h-12zM4 52h12v4h-12zM44 52h8v4h-8zM80 52h12v4h-12zM8 56h12v4h-12zM44 56h8v4h-8zM76 56h12v4h-12zM12 60h12v4h-12zM72 60h12v4h-12zM16 64h12v4h-12zM68 64h12v4h-12zM20 68h12v4h-12zM64 68h12v4h-12zM24 72h12v4h-12zM60 72h12v4h-12zM0 76h4v4h-4zM28 76h12v4h-12zM56 76h12v4h-12zM92 76h4v4h-4zM0 80h8v4h-8zM32 80h12v4h-12zM52 80h12v4h-12zM88 80h8v4h-8zM4 84h8v4h-8zM36 84h24v4h-24zM84 84h8v4h-8zM8 88h8v4h-8zM40 88h16v4h-16zM80 88h8v4h-8zM12 92h8v4h-8zM44 92h8v4h-8zM76 92h8v4h-8z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' shape-rendering='crispEdges'%3E%3Cpath d='M12 0h8v4h-8zM44 0h8v4h-8zM76 0h8v4h-8zM8 4h8v4h-8zM40 4h16v4h-16zM80 4h8v4h-8zM4 8h8v4h-8zM36 8h24v4h-24zM84 8h8v4h-8zM0 12h8v4h-8zM32 12h12v4h-12zM52 12h12v4h-12zM88 12h8v4h-8zM0 16h4v4h-4zM28 16h12v4h-12zM56 16h12v4h-12zM92 16h4v4h-4zM24 20h12v4h-12zM60 20h12v4h-12zM20 24h12v4h-12zM64 24h12v4h-12zM16 28h12v4h-12zM68 28h12v4h-12zM12 32h12v4h-12zM72 32h12v4h-12zM8 36h12v4h-12zM44 36h8v4h-8zM76 36h12v4h-12zM4 40h12v4h-12zM44 40h8v4h-8zM80 40h12v4h-12zM0 44h12v4h-12zM36 44h24v4h-24zM84 44h12v4h-12zM0 48h12v4h-12zM36 48h24v4h-24zM84 48h12v4h-12zM4 52h12v4h-12zM44 52h8v4h-8zM80 52h12v4h-12zM8 56h12v4h-12zM44 56h8v4h-8zM76 56h12v4h-12zM12 60h12v4h-12zM72 60h12v4h-12zM16 64h12v4h-12zM68 64h12v4h-12zM20 68h12v4h-12zM64 68h12v4h-12zM24 72h12v4h-12zM60 72h12v4h-12zM0 76h4v4h-4zM28 76h12v4h-12zM56 76h12v4h-12zM92 76h4v4h-4zM0 80h8v4h-8zM32 80h12v4h-12zM52 80h12v4h-12zM88 80h8v4h-8zM4 84h8v4h-8zM36 84h24v4h-24zM84 84h8v4h-8zM8 88h8v4h-8zM40 88h16v4h-16zM80 88h8v4h-8zM12 92h8v4h-8zM44 92h8v4h-8zM76 92h8v4h-8z'/%3E%3C/svg%3E");
+}
+
+body::after {
+    background-color: var(--atlantis-oro);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' shape-rendering='crispEdges'%3E%3Cpath d='M0 0h8v4h-8zM24 0h8v4h-8zM64 0h8v4h-8zM88 0h8v4h-8zM0 4h4v4h-4zM92 4h4v4h-4zM44 12h8v4h-8zM44 16h8v4h-8zM44 20h8v4h-8zM0 24h4v4h-4zM44 24h8v4h-8zM92 24h4v4h-4zM0 28h4v4h-4zM40 28h16v4h-16zM92 28h4v4h-4zM36 32h8v4h-8zM52 32h8v4h-8zM32 36h8v4h-8zM56 36h8v4h-8zM28 40h8v4h-8zM60 40h8v4h-8zM12 44h20v4h-20zM64 44h20v4h-20zM12 48h20v4h-20zM64 48h20v4h-20zM28 52h8v4h-8zM60 52h8v4h-8zM32 56h8v4h-8zM56 56h8v4h-8zM36 60h8v4h-8zM52 60h8v4h-8zM0 64h4v4h-4zM40 64h16v4h-16zM92 64h4v4h-4zM0 68h4v4h-4zM44 68h8v4h-8zM92 68h4v4h-4zM44 72h8v4h-8zM44 76h8v4h-8zM44 80h8v4h-8zM0 88h4v4h-4zM92 88h4v4h-4zM0 92h8v4h-8zM24 92h8v4h-8zM64 92h8v4h-8zM88 92h8v4h-8z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96' shape-rendering='crispEdges'%3E%3Cpath d='M0 0h8v4h-8zM24 0h8v4h-8zM64 0h8v4h-8zM88 0h8v4h-8zM0 4h4v4h-4zM92 4h4v4h-4zM44 12h8v4h-8zM44 16h8v4h-8zM44 20h8v4h-8zM0 24h4v4h-4zM44 24h8v4h-8zM92 24h4v4h-4zM0 28h4v4h-4zM40 28h16v4h-16zM92 28h4v4h-4zM36 32h8v4h-8zM52 32h8v4h-8zM32 36h8v4h-8zM56 36h8v4h-8zM28 40h8v4h-8zM60 40h8v4h-8zM12 44h20v4h-20zM64 44h20v4h-20zM12 48h20v4h-20zM64 48h20v4h-20zM28 52h8v4h-8zM60 52h8v4h-8zM32 56h8v4h-8zM56 56h8v4h-8zM36 60h8v4h-8zM52 60h8v4h-8zM0 64h4v4h-4zM40 64h16v4h-16zM92 64h4v4h-4zM0 68h4v4h-4zM44 68h8v4h-8zM92 68h4v4h-4zM44 72h8v4h-8zM44 76h8v4h-8zM44 80h8v4h-8zM0 88h4v4h-4zM92 88h4v4h-4zM0 92h8v4h-8zM24 92h8v4h-8zM64 92h8v4h-8zM88 92h8v4h-8z'/%3E%3C/svg%3E");
 }
 .presentacion {
     position: relative;
