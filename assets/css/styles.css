@@ -14,7 +14,7 @@
     --color-superficie: #fbfdfc;
     --color-acento: var(--atlantis-cristal);
     --color-acento-2: var(--atlantis-oro);
-    --color-acento-texto: #ffffff;
+    --color-acento-texto: #0c2230;
     --opacidad-patron: 0.28;
 }
 
@@ -207,7 +207,12 @@ body::after {
     transform: translateY(-3px);
     border-color: var(--color-acento);
     box-shadow: 0 10px 28px color-mix(in srgb, var(--color-acento) 35%, transparent);
-    outline: none;
+}
+
+/* El brillo del hover no basta como indicador para quien navega con teclado: se agrega un contorno. */
+.boton:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
 }
 
 .boton--primario {
