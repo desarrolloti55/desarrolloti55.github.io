@@ -57,7 +57,7 @@ body::before {
     width: 200vmax;
     height: 200vmax;
     background-image: url("../images/greca.svg");
-    background-size: 96px 176px;
+    background-size: 96px 150px;
     transform: translate(-50%, -50%) rotate(-45deg);
     pointer-events: none;
     content: "";
